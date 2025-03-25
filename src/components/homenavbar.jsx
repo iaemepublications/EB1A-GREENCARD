@@ -10,9 +10,9 @@ const HomeNavbar = () => {
   };
 
   return (
-    <nav className="bg-white py-1 px-4 flex items-center justify-between w-[100%] mt-[0px] ">
+    <nav className="bg-white py-1 px-4 ps-18 pr-10 flex items-center justify-around w-[100%] py-3 ">
       {/* Logo Section */}
-      <div className="flex flex-col items-center mr-8 ml-[80px]"> {/* Added spacing */}
+      <div className="flex flex-col items-center"> {/* Added spacing */}
         <img
           src={logo}
           alt="Jinee Logo"
@@ -24,7 +24,7 @@ const HomeNavbar = () => {
       </div>
 
       {/* Hamburger Menu for Mobile */}
-      <div className="md:hidden">
+      <div className="md:hidden ">
         <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
           <svg
             className="w-6 h-6"
@@ -45,40 +45,40 @@ const HomeNavbar = () => {
 
       {/* Navigation Links (Reduce space between links) */}
       <div
-        className={`md:flex md:items-center md:space-x-6 ${ // Consistent spacing between links
+        className={`md:flex md:items-center md:ps-20  md:space-x-5 ${ // Consistent spacing between links
           isOpen ? 'block' : 'hidden'
-        } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 transition-all duration-300 ease-in-out z-10`}
+          } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 transition-all duration-300 ease-in-out z-10`}
       >
-        <Link to="/" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="/" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           Home
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="/about" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           About
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           Services
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           FAQs
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           Contact
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           Blog
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           Testimonials
         </Link>
-        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-medium py-2 md:py-0 uppercase text-sm">
+        <Link to="#" className="block md:inline-block text-gray-600 hover:text-gray-900 font-semibold py-2 md:py-0 uppercase text-md">
           Video Library
         </Link>
       </div>
 
       {/* Book Consultation Button */}
-      <button className="bg-[#5F655F] text-white font-medium py-4 px-7 rounded-full hover:bg-[#4F544F] transition duration-300 text-sm ml-4">
-  Book Consultation
-</button>
+      <button className="bg-[#5F655F]  text-white font-thin py-3 px-8 rounded-full hover:bg-[#4F544F] transition duration-300 text-md ">
+        Book Consultation
+      </button>
 
     </nav>
   );
